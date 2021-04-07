@@ -14,13 +14,13 @@ class DbFixture:
         self.connection.close()
 
     def get_project_list(self):
-        project_list = []
+        list = []
         cursor = self.connection.cursor()
         try:
             cursor.execute("select id, name, description from mantis_project_table order by id")
             for row in cursor:
                 (id, name, description) = row
-                project_list.append(Project(id=id, name=name, description=description))
+                list.append(Project(id=str(id), name=name, description=description))
         finally:
             cursor.close()
-        return project_list
+        return list

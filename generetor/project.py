@@ -28,7 +28,7 @@ def random_string(prefix, maxlen):
 
 
 testdata = [Project(name="1", description="")] + [
-               Project(name=random_string('firstname', 15), description=random_string('middlename', 20))
+               Project(name=random_string('', 15), description=random_string('', 20))
                for i in range(5)
            ]
 
