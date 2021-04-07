@@ -5,7 +5,7 @@ import random
 
 def test_delete_project(app, db):
     if len(db.get_project_list()) == 0:
-        app.project.create_project(Project(name="Test for delete"))
+        app.project.create_project(Project(name="Test for delete", description='Test for delete'))
     old_projects = db.get_project_list()
     project = random.choice(old_projects)
     app.project.delete_project(project)
