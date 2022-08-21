@@ -1,1 +1,4 @@
-# Repository for Python training mantis
+# # Учебный проект адресной книги на языке Python с использованием  mantis
+
+Разработка UI тестов для адресной книги
+
